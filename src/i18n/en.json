@@ -1,0 +1,149 @@
+{
+  "app": {
+    "title": "DemeArizOil",
+    "footer": "© {year} DemeArizOil"
+  },
+  "auth": {
+    "login": "Log in",
+    "loading": "Loading...",
+    "username": "Username",
+    "password": "Password",
+    "loginError": "Incorrect login or connection failed."
+  },
+  "nav": {
+    "home": "Home",
+    "entities": "Entities",
+    "documents": "Documents",
+    "reports": "Reports",
+    "profile": "Profile",
+    "logout": "Log out"
+  },
+  "landing": {
+    "title": "Main dashboard",
+    "subtitle": "Pick a section to continue.",
+    "cta": "Open",
+    "entities": {
+      "title": "Manage entities",
+      "desc": "Users, customers, suppliers, and products."
+    },
+    "documents": {
+      "title": "Manage documents",
+      "desc": "Purchase, sales, stock deposits, and transfers."
+    },
+    "reports": {
+      "title": "Reports",
+      "desc": "Tables and listings for business tracking."
+    }
+  },
+  "entities": {
+    "title": "Entity management",
+    "subtitle": "Access master data and your profile.",
+    "users": {
+      "title": "Users",
+      "desc": "Create, edit, and deactivate users."
+    },
+    "products": {
+      "title": "Products",
+      "desc": "Product catalog and units."
+    },
+    "customers": {
+      "title": "Customers",
+      "desc": "Customer records and contacts."
+    },
+    "suppliers": {
+      "title": "Suppliers",
+      "desc": "Supplier records and contacts."
+    }
+  },
+  "documents": {
+    "title": "Business documents",
+    "subtitle": "Create and review operational documents.",
+    "purchase": {
+      "title": "Purchase notes",
+      "desc": "Purchase notes and line items."
+    },
+    "sales": {
+      "title": "Sales notes",
+      "desc": "Sales notes and line items."
+    },
+    "stock": {
+      "title": "Stock deposits",
+      "desc": "Moves between stock locations."
+    },
+    "cash": {
+      "title": "Cash transfers",
+      "desc": "Moves between cash accounts."
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Quick view of key documents.",
+    "empty": "No data to display.",
+    "columns": {
+      "id": "ID",
+      "date": "Date",
+      "total": "Total",
+      "status": "Status"
+    },
+    "purchase": {
+      "title": "Purchases"
+    },
+    "sales": {
+      "title": "Sales"
+    },
+    "cash": {
+      "title": "Cash transfers"
+    },
+    "stock": {
+      "title": "Stock deposits"
+    }
+  },
+  "placeholders": {
+    "users": "CRUD for users is pending.",
+    "products": "CRUD for products is pending.",
+    "customers": "CRUD for customers is pending.",
+    "suppliers": "CRUD for suppliers is pending.",
+    "purchaseNotes": "Purchase notes module is pending.",
+    "salesNotes": "Sales notes module is pending.",
+    "stockDeposits": "Stock deposits module is pending.",
+    "cashTransfers": "Cash transfers module is pending."
+  },
+  "settings": {
+    "title": "User Profile",
+    "account": {
+      "title": "Account details",
+      "username": "Username",
+      "email": "Email",
+      "language": "Language",
+      "theme": "Theme"
+    },
+    "save": "Save changes",
+    "saving": "Saving...",
+    "password": {
+      "title": "Change password",
+      "current": "Current password",
+      "new": "New password",
+      "update": "Update password",
+      "updating": "Updating..."
+    },
+    "message": {
+      "userMissing": "User not available. Please log in again.",
+      "profileUpdated": "Preferences updated successfully.",
+      "profileError": "Error updating preferences.",
+      "passwordUpdated": "Password updated successfully.",
+      "passwordError": "Error changing password."
+    }
+  },
+  "options": {
+    "language": {
+      "es": "Spanish",
+      "en": "English",
+      "fr": "French"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "earth": "Earth"
+    }
+  }
+}

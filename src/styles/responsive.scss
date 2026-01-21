@@ -1,0 +1,51 @@
+/* file: src/styles/responsive.scss */
+:root {
+  --max-width: 1200px;
+  --padding-mobile: 1rem;
+  --padding-desktop: 2rem;
+}
+
+/* Layout fluido */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--padding-desktop);
+  }
+}
+
+/* Utilidades */
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+/* file: src/styles/responsive.scss */

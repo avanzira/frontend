@@ -1,0 +1,14 @@
+/* file: src/styles/themes/dark.scss */
+@mixin theme() {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --surface: #1c1c1c;
+  --border: #2e2e2e;
+  --primary: #4aa3ff;
+  --primary-text: #0b0b0b;
+  --muted: #b0b0b0;
+  --danger: #ef5350;
+  background-color: var(--bg);
+  color: var(--text);
+}
+/* file: src/styles/themes/dark.scss */

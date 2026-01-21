@@ -1,0 +1,149 @@
+{
+  "app": {
+    "title": "DemeArizOil",
+    "footer": "© {year} DemeArizOil"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "loading": "Cargando...",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "loginError": "Login incorrecto o conexión fallida."
+  },
+  "nav": {
+    "home": "Inicio",
+    "entities": "Entidades",
+    "documents": "Documentos",
+    "reports": "Informes",
+    "profile": "Perfil",
+    "logout": "Salir"
+  },
+  "landing": {
+    "title": "Panel principal",
+    "subtitle": "Selecciona una seccion para continuar.",
+    "cta": "Entrar",
+    "entities": {
+      "title": "Gestionar entidades",
+      "desc": "Usuarios, clientes, proveedores y productos."
+    },
+    "documents": {
+      "title": "Gestionar documentos",
+      "desc": "Albaranes de compra, venta, depositos y transferencias."
+    },
+    "reports": {
+      "title": "Informes",
+      "desc": "Tablas y listados para seguimiento del negocio."
+    }
+  },
+  "entities": {
+    "title": "Gestion de entidades",
+    "subtitle": "Accede a los maestros del sistema y tu perfil.",
+    "users": {
+      "title": "Usuarios",
+      "desc": "Alta, edicion y baja de usuarios."
+    },
+    "products": {
+      "title": "Productos",
+      "desc": "Catalogo de productos y medidas."
+    },
+    "customers": {
+      "title": "Clientes",
+      "desc": "Gestion de clientes y datos de contacto."
+    },
+    "suppliers": {
+      "title": "Proveedores",
+      "desc": "Gestion de proveedores y contactos."
+    }
+  },
+  "documents": {
+    "title": "Documentos del negocio",
+    "subtitle": "Crea y consulta documentos operativos.",
+    "purchase": {
+      "title": "Albaranes de compra",
+      "desc": "Notas de compra y sus lineas."
+    },
+    "sales": {
+      "title": "Albaranes de venta",
+      "desc": "Notas de venta y sus lineas."
+    },
+    "stock": {
+      "title": "Depositos de stock",
+      "desc": "Movimientos entre ubicaciones."
+    },
+    "cash": {
+      "title": "Transferencias de cash",
+      "desc": "Movimientos entre cuentas."
+    }
+  },
+  "reports": {
+    "title": "Informes",
+    "subtitle": "Consulta rapida de documentos clave.",
+    "empty": "No hay datos para mostrar.",
+    "columns": {
+      "id": "ID",
+      "date": "Fecha",
+      "total": "Total",
+      "status": "Estado"
+    },
+    "purchase": {
+      "title": "Compras"
+    },
+    "sales": {
+      "title": "Ventas"
+    },
+    "cash": {
+      "title": "Transferencias de cash"
+    },
+    "stock": {
+      "title": "Depositos de stock"
+    }
+  },
+  "placeholders": {
+    "users": "Pendiente de implementar CRUD de usuarios.",
+    "products": "Pendiente de implementar CRUD de productos.",
+    "customers": "Pendiente de implementar CRUD de clientes.",
+    "suppliers": "Pendiente de implementar CRUD de proveedores.",
+    "purchaseNotes": "Pendiente de implementar albaranes de compra.",
+    "salesNotes": "Pendiente de implementar albaranes de venta.",
+    "stockDeposits": "Pendiente de implementar depositos de stock.",
+    "cashTransfers": "Pendiente de implementar transferencias de cash."
+  },
+  "settings": {
+    "title": "Perfil de Usuario",
+    "account": {
+      "title": "Datos de cuenta",
+      "username": "Usuario",
+      "email": "Email",
+      "language": "Idioma",
+      "theme": "Tema"
+    },
+    "save": "Guardar Cambios",
+    "saving": "Guardando...",
+    "password": {
+      "title": "Cambiar contraseña",
+      "current": "Contraseña actual",
+      "new": "Nueva contraseña",
+      "update": "Actualizar Contraseña",
+      "updating": "Actualizando..."
+    },
+    "message": {
+      "userMissing": "Usuario no disponible. Inicia sesión nuevamente.",
+      "profileUpdated": "Preferencias actualizadas correctamente.",
+      "profileError": "Error al actualizar las preferencias.",
+      "passwordUpdated": "Contraseña actualizada correctamente.",
+      "passwordError": "Error al cambiar la contraseña."
+    }
+  },
+  "options": {
+    "language": {
+      "es": "Español",
+      "en": "English",
+      "fr": "Français"
+    },
+    "theme": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "earth": "Tierra"
+    }
+  }
+}

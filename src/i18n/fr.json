@@ -1,0 +1,149 @@
+{
+  "app": {
+    "title": "DemeArizOil",
+    "footer": "© {year} DemeArizOil"
+  },
+  "auth": {
+    "login": "Se connecter",
+    "loading": "Chargement...",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "loginError": "Identifiants incorrects ou échec de connexion."
+  },
+  "nav": {
+    "home": "Accueil",
+    "entities": "Entites",
+    "documents": "Documents",
+    "reports": "Rapports",
+    "profile": "Profil",
+    "logout": "Se déconnecter"
+  },
+  "landing": {
+    "title": "Tableau de bord",
+    "subtitle": "Choisissez une section pour continuer.",
+    "cta": "Ouvrir",
+    "entities": {
+      "title": "Gerer les entites",
+      "desc": "Utilisateurs, clients, fournisseurs et produits."
+    },
+    "documents": {
+      "title": "Gerer les documents",
+      "desc": "Achats, ventes, depots et transferts."
+    },
+    "reports": {
+      "title": "Rapports",
+      "desc": "Tableaux et listes pour le suivi."
+    }
+  },
+  "entities": {
+    "title": "Gestion des entites",
+    "subtitle": "Accedez aux donnees principales et a votre profil.",
+    "users": {
+      "title": "Utilisateurs",
+      "desc": "Creation, edition et desactivation des utilisateurs."
+    },
+    "products": {
+      "title": "Produits",
+      "desc": "Catalogue des produits et unites."
+    },
+    "customers": {
+      "title": "Clients",
+      "desc": "Fiches clients et contacts."
+    },
+    "suppliers": {
+      "title": "Fournisseurs",
+      "desc": "Fiches fournisseurs et contacts."
+    }
+  },
+  "documents": {
+    "title": "Documents du business",
+    "subtitle": "Creez et consultez les documents.",
+    "purchase": {
+      "title": "Bons d'achat",
+      "desc": "Bons d'achat et lignes."
+    },
+    "sales": {
+      "title": "Bons de vente",
+      "desc": "Bons de vente et lignes."
+    },
+    "stock": {
+      "title": "Depots de stock",
+      "desc": "Mouvements entre emplacements."
+    },
+    "cash": {
+      "title": "Transferts de cash",
+      "desc": "Mouvements entre comptes."
+    }
+  },
+  "reports": {
+    "title": "Rapports",
+    "subtitle": "Vue rapide des documents cles.",
+    "empty": "Aucune donnee a afficher.",
+    "columns": {
+      "id": "ID",
+      "date": "Date",
+      "total": "Total",
+      "status": "Statut"
+    },
+    "purchase": {
+      "title": "Achats"
+    },
+    "sales": {
+      "title": "Ventes"
+    },
+    "cash": {
+      "title": "Transferts de cash"
+    },
+    "stock": {
+      "title": "Depots de stock"
+    }
+  },
+  "placeholders": {
+    "users": "CRUD des utilisateurs en attente.",
+    "products": "CRUD des produits en attente.",
+    "customers": "CRUD des clients en attente.",
+    "suppliers": "CRUD des fournisseurs en attente.",
+    "purchaseNotes": "Module des bons d'achat en attente.",
+    "salesNotes": "Module des bons de vente en attente.",
+    "stockDeposits": "Module des depots de stock en attente.",
+    "cashTransfers": "Module des transferts de cash en attente."
+  },
+  "settings": {
+    "title": "Profil utilisateur",
+    "account": {
+      "title": "Informations du compte",
+      "username": "Nom d'utilisateur",
+      "email": "E-mail",
+      "language": "Langue",
+      "theme": "Thème"
+    },
+    "save": "Enregistrer les modifications",
+    "saving": "Enregistrement...",
+    "password": {
+      "title": "Changer le mot de passe",
+      "current": "Mot de passe actuel",
+      "new": "Nouveau mot de passe",
+      "update": "Mettre à jour le mot de passe",
+      "updating": "Mise à jour..."
+    },
+    "message": {
+      "userMissing": "Utilisateur indisponible. Veuillez vous reconnecter.",
+      "profileUpdated": "Préférences mises à jour avec succès.",
+      "profileError": "Erreur lors de la mise à jour des préférences.",
+      "passwordUpdated": "Mot de passe mis à jour avec succès.",
+      "passwordError": "Erreur lors du changement de mot de passe."
+    }
+  },
+  "options": {
+    "language": {
+      "es": "Espagnol",
+      "en": "Anglais",
+      "fr": "Français"
+    },
+    "theme": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "earth": "Terre"
+    }
+  }
+}

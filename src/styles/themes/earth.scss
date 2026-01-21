@@ -1,0 +1,14 @@
+/* file: src/styles/themes/earth.scss */
+@mixin theme() {
+  --bg: #efe6d6;
+  --text: #3a2f2a;
+  --surface: #e2d8c6;
+  --border: #c7b79b;
+  --primary: #9b6b2f;
+  --primary-text: #fff8ed;
+  --muted: #5a4a3f;
+  --danger: #a94442;
+  background-color: var(--bg);
+  color: var(--text);
+}
+/* file: src/styles/themes/earth.scss */
