@@ -6,33 +6,29 @@
     <p class="lead">{{ $t("documents.subtitle") }}</p>
 
     <LandingGrid>
-      <RouterLink class="card-link" to="/app/documents/purchase-notes">
-        <BaseCard>
-          <h3>{{ $t("documents.purchase.title") }}</h3>
-          <p>{{ $t("documents.purchase.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/documents/purchase-notes">
+        <IconTile icon="🧾">
+          <template #title>{{ $t("documents.purchase.title") }}</template>
+          <template #desc>{{ $t("documents.purchase.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/documents/sales-notes">
-        <BaseCard>
-          <h3>{{ $t("documents.sales.title") }}</h3>
-          <p>{{ $t("documents.sales.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/documents/sales-notes">
+        <IconTile icon="🧾">
+          <template #title>{{ $t("documents.sales.title") }}</template>
+          <template #desc>{{ $t("documents.sales.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/documents/stock-deposits">
-        <BaseCard>
-          <h3>{{ $t("documents.stock.title") }}</h3>
-          <p>{{ $t("documents.stock.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/documents/stock-deposits">
+        <IconTile icon="📦">
+          <template #title>{{ $t("documents.stock.title") }}</template>
+          <template #desc>{{ $t("documents.stock.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/documents/cash-transfers">
-        <BaseCard>
-          <h3>{{ $t("documents.cash.title") }}</h3>
-          <p>{{ $t("documents.cash.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/documents/cash-transfers">
+        <IconTile icon="💸">
+          <template #title>{{ $t("documents.cash.title") }}</template>
+          <template #desc>{{ $t("documents.cash.desc") }}</template>
+        </IconTile>
       </RouterLink>
     </LandingGrid>
   </div>
@@ -40,38 +36,25 @@
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import BaseButton from "../components/BaseButton.vue";
-import BaseCard from "../components/BaseCard.vue";
+import IconTile from "../components/IconTile.vue";
 import LandingGrid from "../components/LandingGrid.vue";
 import SectionTitle from "../components/SectionTitle.vue";
 </script>
 
 <style scoped>
 .landing {
-  gap: 1.5rem;
+  gap: 1.2vh;
+  align-items: center;
 }
 
 .lead {
   text-align: center;
   color: var(--muted);
-  margin: 0 0 1rem;
+  margin: 0 0 1vh;
 }
 
-.card-link {
+.tile-link {
   text-decoration: none;
   color: inherit;
-}
-
-.card-link :deep(.base-card) {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-link:hover :deep(.base-card) {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-}
-
-h3 {
-  margin: 0 0 0.5rem;
 }
 </style>

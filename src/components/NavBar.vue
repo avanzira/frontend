@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useAuthStore } from "../store/auth.store";
@@ -34,13 +35,18 @@ const isActive = (path: string) => {
   return route.path.startsWith(path);
 };
 
-const links = [
+const baseLinks = [
   { path: "/app", labelKey: "nav.home", icon: "🏠" },
   { path: "/app/entities", labelKey: "nav.entities", icon: "🧩" },
   { path: "/app/documents", labelKey: "nav.documents", icon: "🧾" },
   { path: "/app/reports", labelKey: "nav.reports", icon: "📊" },
-  { path: "/app/entities/me", labelKey: "nav.profile", icon: "👤" },
+  { path: "/app/profile", labelKey: "nav.profile", icon: "👤" },
 ];
+
+const links = computed(() => {
+  if (auth.user?.rol === "ADMIN") return baseLinks;
+  return baseLinks.filter((link) => link.path !== "/app/entities/users");
+});
 
 const handleLogout = () => {
   auth.logout();
@@ -51,10 +57,19 @@ const handleLogout = () => {
 <style scoped>
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 100%;
-  gap: 1rem;
+  gap: 2vw;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-link {
@@ -65,9 +80,11 @@ const handleLogout = () => {
   font-weight: 500;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   transition: opacity 0.2s, color 0.2s;
+  gap: 0.8vw;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -83,31 +100,12 @@ const handleLogout = () => {
 }
 
 .icon {
-  font-size: 1.2rem;
+  font-size: 2vh;
   line-height: 1;
 }
 
 .label {
-  font-size: 0.8rem;
-}
-
-@media (min-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 1rem;
-  }
-
-  .nav-link {
-    flex-direction: row;
-    gap: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .icon {
-    font-size: 1.4rem;
-  }
+  font-size: 1.6vh;
 }
 </style>
 /* file: src/components/NavBar.vue */

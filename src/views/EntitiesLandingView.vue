@@ -6,72 +6,60 @@
     <p class="lead">{{ $t("entities.subtitle") }}</p>
 
     <LandingGrid>
-      <RouterLink class="card-link" to="/app/entities/users">
-        <BaseCard>
-          <h3>{{ $t("entities.users.title") }}</h3>
-          <p>{{ $t("entities.users.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink v-if="isAdmin" class="tile-link" to="/app/entities/users">
+        <IconTile icon="👥">
+          <template #title>{{ $t("entities.users.title") }}</template>
+          <template #desc>{{ $t("entities.users.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/entities/products">
-        <BaseCard>
-          <h3>{{ $t("entities.products.title") }}</h3>
-          <p>{{ $t("entities.products.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/entities/products">
+        <IconTile icon="📦">
+          <template #title>{{ $t("entities.products.title") }}</template>
+          <template #desc>{{ $t("entities.products.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/entities/customers">
-        <BaseCard>
-          <h3>{{ $t("entities.customers.title") }}</h3>
-          <p>{{ $t("entities.customers.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/entities/customers">
+        <IconTile icon="🤝">
+          <template #title>{{ $t("entities.customers.title") }}</template>
+          <template #desc>{{ $t("entities.customers.desc") }}</template>
+        </IconTile>
       </RouterLink>
-      <RouterLink class="card-link" to="/app/entities/suppliers">
-        <BaseCard>
-          <h3>{{ $t("entities.suppliers.title") }}</h3>
-          <p>{{ $t("entities.suppliers.desc") }}</p>
-          <BaseButton variant="ghost">{{ $t("landing.cta") }}</BaseButton>
-        </BaseCard>
+      <RouterLink class="tile-link" to="/app/entities/suppliers">
+        <IconTile icon="🏭">
+          <template #title>{{ $t("entities.suppliers.title") }}</template>
+          <template #desc>{{ $t("entities.suppliers.desc") }}</template>
+        </IconTile>
       </RouterLink>
     </LandingGrid>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import { RouterLink } from "vue-router";
-import BaseButton from "../components/BaseButton.vue";
-import BaseCard from "../components/BaseCard.vue";
+import IconTile from "../components/IconTile.vue";
 import LandingGrid from "../components/LandingGrid.vue";
 import SectionTitle from "../components/SectionTitle.vue";
+import { useAuthStore } from "../store/auth.store";
+
+const auth = useAuthStore();
+const isAdmin = computed(() => auth.user?.rol === "ADMIN");
 </script>
 
 <style scoped>
 .landing {
-  gap: 1.5rem;
+  gap: 1.2vh;
+  align-items: center;
 }
 
 .lead {
   text-align: center;
   color: var(--muted);
-  margin: 0 0 1rem;
+  margin: 0 0 1vh;
 }
 
-.card-link {
+.tile-link {
   text-decoration: none;
   color: inherit;
-}
-
-.card-link :deep(.base-card) {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-link:hover :deep(.base-card) {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-}
-
-h3 {
-  margin: 0 0 0.5rem;
 }
 </style>

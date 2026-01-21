@@ -55,6 +55,63 @@
       "desc": "Gestion de proveedores y contactos."
     }
   },
+  "users": {
+    "title": "Usuarios",
+    "subtitle": "Gestion y permisos de usuarios del sistema.",
+    "noAccess": "Solo ADMIN puede acceder a esta seccion.",
+    "filters": {
+      "title": "Filtros",
+      "role": "Rol",
+      "status": "Estado",
+      "all": "Todos",
+      "active": "Activos",
+      "inactive": "Inactivos"
+    },
+    "create": {
+      "title": "Crear usuario"
+    },
+    "edit": {
+      "title": "Editar usuario",
+      "action": "Editar"
+    },
+    "fields": {
+      "username": "Usuario",
+      "email": "Email",
+      "role": "Rol",
+      "language": "Idioma",
+      "theme": "Tema",
+      "none": "Ninguno",
+      "password": "contraseña",
+      "active": "Activo"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "list": {
+      "title": "Listado"
+    },
+    "actions": "Acciones",
+    "empty": "No hay usuarios para mostrar.",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "delete": "Desactivar",
+    "restore": "Restaurar",
+    "created": "Usuario creado correctamente.",
+    "updated": "Usuario actualizado correctamente.",
+    "deleted": "Usuario desactivado.",
+    "restored": "Usuario restaurado.",
+    "error": "Error al cargar usuarios.",
+    "saveError": "Error al guardar el usuario.",
+    "password": {
+      "title": "Cambiar contraseña",
+      "current": "contraseña actual",
+      "new": "Nueva contraseña",
+      "save": "Actualizar contraseña",
+      "saving": "Actualizando...",
+      "updated": "contraseña actualizada correctamente.",
+      "error": "Error al cambiar la contraseña."
+    }
+  },
   "documents": {
     "title": "Documentos del negocio",
     "subtitle": "Crea y consulta documentos operativos.",
@@ -74,6 +131,90 @@
       "title": "Transferencias de cash",
       "desc": "Movimientos entre cuentas."
     }
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Gestion del catalogo de productos.",
+    "filters": {
+      "title": "Filtros",
+      "name": "Nombre",
+      "inventory": "Inventariable",
+      "all": "Todos",
+      "yes": "Si",
+      "no": "No"
+    },
+    "create": {
+      "title": "Crear producto"
+    },
+    "edit": {
+      "title": "Editar producto",
+      "action": "Editar"
+    },
+    "fields": {
+      "name": "Nombre",
+      "unit": "Unidad",
+      "inventory": "Inventariable",
+      "cost": "Costo promedio"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "list": {
+      "title": "Listado"
+    },
+    "actions": "Acciones",
+    "empty": "No hay productos para mostrar.",
+    "delete": "Desactivar",
+    "restore": "Restaurar",
+    "created": "Producto creado correctamente.",
+    "updated": "Producto actualizado correctamente.",
+    "deleted": "Producto desactivado.",
+    "restored": "Producto restaurado.",
+    "error": "Error al cargar productos.",
+    "saveError": "Error al guardar el producto."
+  },
+  "entityCrud": {
+    "subtitle": "Gestiona registros, contactos y estado.",
+    "filters": {
+      "title": "Filtros",
+      "name": "Nombre",
+      "status": "Estado",
+      "all": "Todos",
+      "active": "Activos",
+      "inactive": "Inactivos"
+    },
+    "create": {
+      "title": "Crear registro"
+    },
+    "edit": {
+      "title": "Editar registro",
+      "action": "Editar"
+    },
+    "fields": {
+      "name": "Nombre",
+      "phone": "Telefono",
+      "email": "Email",
+      "address": "Direccion",
+      "active": "Activo"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "list": {
+      "title": "Listado"
+    },
+    "actions": "Acciones",
+    "empty": "No hay registros para mostrar.",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "delete": "Desactivar",
+    "restore": "Restaurar",
+    "created": "Registro creado correctamente.",
+    "updated": "Registro actualizado correctamente.",
+    "deleted": "Registro desactivado.",
+    "restored": "Registro restaurado.",
+    "error": "Error al cargar registros.",
+    "saveError": "Error al guardar el registro."
   },
   "reports": {
     "title": "Informes",

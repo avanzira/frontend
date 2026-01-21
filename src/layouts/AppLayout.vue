@@ -1,17 +1,13 @@
 /* file: src/layouts/AppLayout.vue */
 <template>
   <div class="layout">
-    <aside class="sidebar hidden-mobile">
+    <header class="top-nav">
       <nav-bar />
-    </aside>
+    </header>
 
     <main class="main-content">
       <RouterView />
     </main>
-
-    <nav class="bottom-nav">
-      <nav-bar />
-    </nav>
   </div>
 </template>
 
@@ -22,38 +18,29 @@ import NavBar from "../components/NavBar.vue";
 <style scoped>
 .layout {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--text);
 }
 
-.sidebar {
-  width: 240px;
-  border-right: 1px solid var(--border);
-  padding: 1rem;
+.top-nav {
+  width: 100%;
+  height: 7vh;
+  padding: 0 3vw;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .main-content {
   flex: 1;
-  padding: 1.5rem 5vw;
+  padding: 1.5vh 4vw;
   overflow-y: auto;
-}
-
-/* Barra inferior móvil */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 56px;
-  background-color: var(--bg);
-  border-top: 1px solid var(--border);
-}
-
-@media (min-width: 768px) {
-  .bottom-nav {
-    display: none;
-  }
 }
 </style>
 /* file: src/layouts/AppLayout.vue */

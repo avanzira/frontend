@@ -1,12 +1,11 @@
 <template>
-  <BaseCard class="placeholder">
+  <section class="placeholder">
     <SectionTitle :level="2">{{ title }}</SectionTitle>
     <p class="text">{{ description }}</p>
-  </BaseCard>
+  </section>
 </template>
 
 <script setup lang="ts">
-import BaseCard from "./BaseCard.vue";
 import SectionTitle from "./SectionTitle.vue";
 
 defineProps<{
@@ -18,6 +17,11 @@ defineProps<{
 <style scoped>
 .placeholder {
   text-align: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2.2vh 3vw;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .text {

@@ -55,6 +55,63 @@
       "desc": "Supplier records and contacts."
     }
   },
+  "users": {
+    "title": "Users",
+    "subtitle": "Manage system users and permissions.",
+    "noAccess": "Only ADMIN can access this section.",
+    "filters": {
+      "title": "Filters",
+      "role": "Role",
+      "status": "Status",
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "create": {
+      "title": "Create user"
+    },
+    "edit": {
+      "title": "Edit user",
+      "action": "Edit"
+    },
+    "fields": {
+      "username": "Username",
+      "email": "Email",
+      "role": "Role",
+      "language": "Language",
+      "theme": "Theme",
+      "none": "None",
+      "password": "Password",
+      "active": "Active"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "list": {
+      "title": "List"
+    },
+    "actions": "Actions",
+    "empty": "No users to display.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "delete": "Deactivate",
+    "restore": "Restore",
+    "created": "User created successfully.",
+    "updated": "User updated successfully.",
+    "deleted": "User deactivated.",
+    "restored": "User restored.",
+    "error": "Error loading users.",
+    "saveError": "Error saving user.",
+    "password": {
+      "title": "Change password",
+      "current": "Current password",
+      "new": "New password",
+      "save": "Update password",
+      "saving": "Updating...",
+      "updated": "Password updated successfully.",
+      "error": "Error changing password."
+    }
+  },
   "documents": {
     "title": "Business documents",
     "subtitle": "Create and review operational documents.",
@@ -74,6 +131,90 @@
       "title": "Cash transfers",
       "desc": "Moves between cash accounts."
     }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Manage the product catalog.",
+    "filters": {
+      "title": "Filters",
+      "name": "Name",
+      "inventory": "Inventory",
+      "all": "All",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "create": {
+      "title": "Create product"
+    },
+    "edit": {
+      "title": "Edit product",
+      "action": "Edit"
+    },
+    "fields": {
+      "name": "Name",
+      "unit": "Unit",
+      "inventory": "Inventory",
+      "cost": "Average cost"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "list": {
+      "title": "List"
+    },
+    "actions": "Actions",
+    "empty": "No products to display.",
+    "delete": "Deactivate",
+    "restore": "Restore",
+    "created": "Product created successfully.",
+    "updated": "Product updated successfully.",
+    "deleted": "Product deactivated.",
+    "restored": "Product restored.",
+    "error": "Error loading products.",
+    "saveError": "Error saving product."
+  },
+  "entityCrud": {
+    "subtitle": "Manage records, contacts, and status.",
+    "filters": {
+      "title": "Filters",
+      "name": "Name",
+      "status": "Status",
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "create": {
+      "title": "Create record"
+    },
+    "edit": {
+      "title": "Edit record",
+      "action": "Edit"
+    },
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "active": "Active"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "list": {
+      "title": "List"
+    },
+    "actions": "Actions",
+    "empty": "No records to display.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "delete": "Deactivate",
+    "restore": "Restore",
+    "created": "Record created successfully.",
+    "updated": "Record updated successfully.",
+    "deleted": "Record deactivated.",
+    "restored": "Record restored.",
+    "error": "Error loading records.",
+    "saveError": "Error saving record."
   },
   "reports": {
     "title": "Reports",

@@ -1,23 +1,23 @@
 <template>
   <div class="page container column">
     <SectionTitle :level="1" align="center">
-      {{ $t("products.title") }}
+      {{ title }}
     </SectionTitle>
-    <p class="lead">{{ $t("products.subtitle") }}</p>
+    <p class="lead">{{ $t("entityCrud.subtitle") }}</p>
 
     <section class="panel">
-      <SectionTitle :level="2">{{ $t("products.filters.title") }}</SectionTitle>
+      <SectionTitle :level="2">{{ $t("entityCrud.filters.title") }}</SectionTitle>
       <div class="filters">
         <label class="field">
-          {{ $t("products.filters.name") }}
+          {{ $t("entityCrud.filters.name") }}
           <input v-model="filters.name" type="text" />
         </label>
         <label class="field">
-          {{ $t("products.filters.inventory") }}
-          <select v-model="filters.inventory">
-            <option value="all">{{ $t("products.filters.all") }}</option>
-            <option value="yes">{{ $t("products.filters.yes") }}</option>
-            <option value="no">{{ $t("products.filters.no") }}</option>
+          {{ $t("entityCrud.filters.status") }}
+          <select v-model="filters.active">
+            <option value="all">{{ $t("entityCrud.filters.all") }}</option>
+            <option value="active">{{ $t("entityCrud.filters.active") }}</option>
+            <option value="inactive">{{ $t("entityCrud.filters.inactive") }}</option>
           </select>
         </label>
       </div>
@@ -25,30 +25,32 @@
 
     <section class="panel">
       <SectionTitle :level="2">
-        {{ isEditing ? $t("products.edit.title") : $t("products.create.title") }}
+        {{ isEditing ? $t("entityCrud.edit.title") : $t("entityCrud.create.title") }}
       </SectionTitle>
       <form class="form" @submit.prevent="handleSubmit">
         <label class="field">
-          {{ $t("products.fields.name") }}
+          {{ $t("entityCrud.fields.name") }}
           <input v-model="form.name" type="text" required />
         </label>
 
         <label class="field">
-          {{ $t("products.fields.unit") }}
-          <input v-model="form.unit_measure" type="text" required />
+          {{ $t("entityCrud.fields.phone") }}
+          <input v-model="form.phone" type="text" />
         </label>
 
         <label class="field">
-          {{ $t("products.fields.inventory") }}
-          <select v-model="form.is_inventory">
-            <option :value="true">{{ $t("products.filters.yes") }}</option>
-            <option :value="false">{{ $t("products.filters.no") }}</option>
-          </select>
+          {{ $t("entityCrud.fields.email") }}
+          <input v-model="form.email" type="email" />
+        </label>
+
+        <label class="field">
+          {{ $t("entityCrud.fields.address") }}
+          <input v-model="form.address" type="text" />
         </label>
 
         <div class="actions">
           <button type="submit" class="btn-primary" :disabled="saving">
-            {{ saving ? $t("products.saving") : $t("products.save") }}
+            {{ saving ? $t("entityCrud.saving") : $t("entityCrud.save") }}
           </button>
           <button
             v-if="isEditing"
@@ -56,59 +58,51 @@
             class="btn-secondary"
             @click="resetForm"
           >
-            {{ $t("products.cancel") }}
+            {{ $t("entityCrud.cancel") }}
           </button>
         </div>
       </form>
     </section>
 
     <section class="panel">
-      <SectionTitle :level="2">{{ $t("products.list.title") }}</SectionTitle>
+      <SectionTitle :level="2">{{ $t("entityCrud.list.title") }}</SectionTitle>
       <div class="table-wrapper">
         <table>
           <thead>
             <tr>
-              <th>{{ $t("products.fields.name") }}</th>
-              <th>{{ $t("products.fields.unit") }}</th>
-              <th>{{ $t("products.fields.inventory") }}</th>
-              <th>{{ $t("products.fields.cost") }}</th>
-              <th>{{ $t("products.actions") }}</th>
+              <th>{{ $t("entityCrud.fields.name") }}</th>
+              <th>{{ $t("entityCrud.fields.phone") }}</th>
+              <th>{{ $t("entityCrud.fields.email") }}</th>
+              <th>{{ $t("entityCrud.fields.address") }}</th>
+              <th>{{ $t("entityCrud.fields.active") }}</th>
+              <th>{{ $t("entityCrud.actions") }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-if="filteredProducts.length === 0">
-              <td :colspan="5" class="empty">
-                {{ $t("products.empty") }}
+            <tr v-if="filteredItems.length === 0">
+              <td :colspan="6" class="empty">
+                {{ $t("entityCrud.empty") }}
               </td>
             </tr>
-            <tr v-for="product in filteredProducts" :key="product.id">
-              <td>{{ product.name }}</td>
-              <td>{{ product.unit_measure }}</td>
-              <td>
-                {{
-                  product.is_inventory
-                    ? $t("products.filters.yes")
-                    : $t("products.filters.no")
-                }}
-              </td>
-              <td>{{ product.cost_average }}</td>
+            <tr v-for="item in filteredItems" :key="item.id">
+              <td>{{ item.name }}</td>
+              <td>{{ item.phone || "-" }}</td>
+              <td>{{ item.email || "-" }}</td>
+              <td>{{ item.address || "-" }}</td>
+              <td>{{ item.is_active ? $t("entityCrud.active") : $t("entityCrud.inactive") }}</td>
               <td class="row-actions">
-                <button class="link" @click="startEdit(product)">
-                  {{ $t("products.edit.action") }}
+                <button class="link" @click="startEdit(item)">
+                  {{ $t("entityCrud.edit.action") }}
                 </button>
                 <button
-                  v-if="product.is_active"
+                  v-if="item.is_active"
                   class="link danger"
-                  @click="toggleActive(product)"
+                  @click="toggleActive(item)"
                 >
-                  {{ $t("products.delete") }}
+                  {{ $t("entityCrud.delete") }}
                 </button>
-                <button
-                  v-else
-                  class="link"
-                  @click="restoreProduct(product)"
-                >
-                  {{ $t("products.restore") }}
+                <button v-else class="link" @click="restoreItem(item)">
+                  {{ $t("entityCrud.restore") }}
                 </button>
               </td>
             </tr>
@@ -124,21 +118,26 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from "vue";
 import { useI18n } from "vue-i18n";
-import SectionTitle from "../components/SectionTitle.vue";
+import SectionTitle from "./SectionTitle.vue";
 import api from "../services/api";
 
-interface Product {
+interface Entity {
   id: number;
   name: string;
-  unit_measure: string;
-  is_inventory: boolean;
-  cost_average: number;
+  phone: string | null;
+  email: string | null;
+  address: string | null;
   is_active: boolean;
 }
 
+const props = defineProps<{
+  resource: "customers" | "suppliers";
+  title: string;
+}>();
+
 const { t } = useI18n();
 
-const products = ref<Product[]>([]);
+const items = ref<Entity[]>([]);
 const message = ref("");
 const saving = ref(false);
 const isEditing = ref(false);
@@ -146,37 +145,38 @@ const editingId = ref<number | null>(null);
 
 const filters = reactive({
   name: "",
-  inventory: "all",
+  active: "all",
 });
 
 const form = reactive({
   name: "",
-  unit_measure: "",
-  is_inventory: true,
+  phone: "",
+  email: "",
+  address: "",
 });
 
-const filteredProducts = computed(() => {
-  return products.value.filter((product) => {
-    const nameMatch = product.name
+const filteredItems = computed(() => {
+  return items.value.filter((item) => {
+    const nameMatch = item.name
       .toLowerCase()
       .includes(filters.name.toLowerCase());
-    const inventoryMatch =
-      filters.inventory === "all"
+    const activeMatch =
+      filters.active === "all"
         ? true
-        : filters.inventory === "yes"
-        ? product.is_inventory
-        : !product.is_inventory;
-    return nameMatch && inventoryMatch;
+        : filters.active === "active"
+        ? item.is_active
+        : !item.is_active;
+    return nameMatch && activeMatch;
   });
 });
 
-const fetchProducts = async () => {
+const fetchItems = async () => {
   try {
-    const { data } = await api.get<Product[]>("/products/");
-    products.value = data;
+    const { data } = await api.get<Entity[]>(`/${props.resource}/`);
+    items.value = data;
   } catch (err) {
     console.error(err);
-    message.value = t("products.error");
+    message.value = t("entityCrud.error");
   }
 };
 
@@ -184,16 +184,18 @@ const resetForm = () => {
   isEditing.value = false;
   editingId.value = null;
   form.name = "";
-  form.unit_measure = "";
-  form.is_inventory = true;
+  form.phone = "";
+  form.email = "";
+  form.address = "";
 };
 
-const startEdit = (product: Product) => {
+const startEdit = (item: Entity) => {
   isEditing.value = true;
-  editingId.value = product.id;
-  form.name = product.name;
-  form.unit_measure = product.unit_measure;
-  form.is_inventory = product.is_inventory;
+  editingId.value = item.id;
+  form.name = item.name;
+  form.phone = item.phone || "";
+  form.email = item.email || "";
+  form.address = item.address || "";
 };
 
 const handleSubmit = async () => {
@@ -201,53 +203,55 @@ const handleSubmit = async () => {
   message.value = "";
   try {
     if (isEditing.value && editingId.value) {
-      await api.put(`/products/${editingId.value}`, {
+      await api.put(`/${props.resource}/${editingId.value}`, {
         name: form.name,
-        unit_measure: form.unit_measure,
-        is_inventory: form.is_inventory,
+        phone: form.phone || null,
+        email: form.email || null,
+        address: form.address || null,
       });
-      message.value = t("products.updated");
+      message.value = t("entityCrud.updated");
     } else {
-      await api.post("/products/", {
+      await api.post(`/${props.resource}/`, {
         name: form.name,
-        unit_measure: form.unit_measure,
-        is_inventory: form.is_inventory,
+        phone: form.phone || null,
+        email: form.email || null,
+        address: form.address || null,
       });
-      message.value = t("products.created");
+      message.value = t("entityCrud.created");
     }
-    await fetchProducts();
+    await fetchItems();
     resetForm();
   } catch (err) {
     console.error(err);
-    message.value = t("products.saveError");
+    message.value = t("entityCrud.saveError");
   } finally {
     saving.value = false;
   }
 };
 
-const toggleActive = async (product: Product) => {
+const toggleActive = async (item: Entity) => {
   try {
-    await api.delete(`/products/${product.id}`);
-    message.value = t("products.deleted");
-    await fetchProducts();
+    await api.delete(`/${props.resource}/${item.id}`);
+    message.value = t("entityCrud.deleted");
+    await fetchItems();
   } catch (err) {
     console.error(err);
-    message.value = t("products.saveError");
+    message.value = t("entityCrud.saveError");
   }
 };
 
-const restoreProduct = async (product: Product) => {
+const restoreItem = async (item: Entity) => {
   try {
-    await api.post(`/products/${product.id}/restore`);
-    message.value = t("products.restored");
-    await fetchProducts();
+    await api.post(`/${props.resource}/${item.id}/restore`);
+    message.value = t("entityCrud.restored");
+    await fetchItems();
   } catch (err) {
     console.error(err);
-    message.value = t("products.saveError");
+    message.value = t("entityCrud.saveError");
   }
 };
 
-onMounted(fetchProducts);
+onMounted(fetchItems);
 </script>
 
 <style scoped>

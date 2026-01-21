@@ -6,9 +6,12 @@
 
 <style scoped>
 .landing-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
   width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+  align-items: center;
 }
 </style>

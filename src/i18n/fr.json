@@ -55,6 +55,63 @@
       "desc": "Fiches fournisseurs et contacts."
     }
   },
+  "users": {
+    "title": "Utilisateurs",
+    "subtitle": "Gestion des utilisateurs et des permissions.",
+    "noAccess": "Seul ADMIN peut acceder a cette section.",
+    "filters": {
+      "title": "Filtres",
+      "role": "Role",
+      "status": "Statut",
+      "all": "Tous",
+      "active": "Actifs",
+      "inactive": "Inactifs"
+    },
+    "create": {
+      "title": "Creer un utilisateur"
+    },
+    "edit": {
+      "title": "Modifier utilisateur",
+      "action": "Modifier"
+    },
+    "fields": {
+      "username": "Nom d'utilisateur",
+      "email": "E-mail",
+      "role": "Role",
+      "language": "Langue",
+      "theme": "Theme",
+      "none": "Aucun",
+      "password": "Mot de passe",
+      "active": "Actif"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "list": {
+      "title": "Liste"
+    },
+    "actions": "Actions",
+    "empty": "Aucun utilisateur a afficher.",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "delete": "Desactiver",
+    "restore": "Restaurer",
+    "created": "Utilisateur cree avec succes.",
+    "updated": "Utilisateur mis a jour avec succes.",
+    "deleted": "Utilisateur desactive.",
+    "restored": "Utilisateur restaure.",
+    "error": "Erreur lors du chargement des utilisateurs.",
+    "saveError": "Erreur lors de l'enregistrement.",
+    "password": {
+      "title": "Changer le mot de passe",
+      "current": "Mot de passe actuel",
+      "new": "Nouveau mot de passe",
+      "save": "Mettre a jour le mot de passe",
+      "saving": "Mise a jour...",
+      "updated": "Mot de passe mis a jour avec succes.",
+      "error": "Erreur lors du changement de mot de passe."
+    }
+  },
   "documents": {
     "title": "Documents du business",
     "subtitle": "Creez et consultez les documents.",
@@ -74,6 +131,90 @@
       "title": "Transferts de cash",
       "desc": "Mouvements entre comptes."
     }
+  },
+  "products": {
+    "title": "Produits",
+    "subtitle": "Gestion du catalogue des produits.",
+    "filters": {
+      "title": "Filtres",
+      "name": "Nom",
+      "inventory": "Inventorie",
+      "all": "Tous",
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "create": {
+      "title": "Creer un produit"
+    },
+    "edit": {
+      "title": "Modifier produit",
+      "action": "Modifier"
+    },
+    "fields": {
+      "name": "Nom",
+      "unit": "Unite",
+      "inventory": "Inventorie",
+      "cost": "Cout moyen"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "list": {
+      "title": "Liste"
+    },
+    "actions": "Actions",
+    "empty": "Aucun produit a afficher.",
+    "delete": "Desactiver",
+    "restore": "Restaurer",
+    "created": "Produit cree avec succes.",
+    "updated": "Produit mis a jour avec succes.",
+    "deleted": "Produit desactive.",
+    "restored": "Produit restaure.",
+    "error": "Erreur lors du chargement des produits.",
+    "saveError": "Erreur lors de l'enregistrement du produit."
+  },
+  "entityCrud": {
+    "subtitle": "Gestion des fiches, contacts et statut.",
+    "filters": {
+      "title": "Filtres",
+      "name": "Nom",
+      "status": "Statut",
+      "all": "Tous",
+      "active": "Actifs",
+      "inactive": "Inactifs"
+    },
+    "create": {
+      "title": "Creer une fiche"
+    },
+    "edit": {
+      "title": "Modifier fiche",
+      "action": "Modifier"
+    },
+    "fields": {
+      "name": "Nom",
+      "phone": "Telephone",
+      "email": "E-mail",
+      "address": "Adresse",
+      "active": "Actif"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "list": {
+      "title": "Liste"
+    },
+    "actions": "Actions",
+    "empty": "Aucune fiche a afficher.",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "delete": "Desactiver",
+    "restore": "Restaurer",
+    "created": "Fiche creee avec succes.",
+    "updated": "Fiche mise a jour avec succes.",
+    "deleted": "Fiche desactivee.",
+    "restored": "Fiche restauree.",
+    "error": "Erreur lors du chargement.",
+    "saveError": "Erreur lors de l'enregistrement."
   },
   "reports": {
     "title": "Rapports",
