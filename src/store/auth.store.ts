@@ -27,8 +27,8 @@ interface LoginResponse {
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
-    token: localStorage.getItem("token") || null,
-    refreshToken: localStorage.getItem("refreshToken") || null,
+    token: null as string | null,
+    refreshToken: null as string | null,
     user: null as User | null,
   }),
 
@@ -43,9 +43,6 @@ export const useAuthStore = defineStore("auth", {
       this.refreshToken = data.refresh_token;
       this.user = data.user;
 
-      localStorage.setItem("token", this.token);
-      localStorage.setItem("refreshToken", this.refreshToken);
-
       const settings = useSettingsStore();
       const lang = (data.user.user_language as Language) || "es";
       const theme = (data.user.user_theme as Theme) || "light";
@@ -57,8 +54,6 @@ export const useAuthStore = defineStore("auth", {
       this.token = null;
       this.refreshToken = null;
       this.user = null;
-      localStorage.removeItem("token");
-      localStorage.removeItem("refreshToken");
     },
   },
 });

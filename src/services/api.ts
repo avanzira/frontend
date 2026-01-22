@@ -72,7 +72,6 @@ api.interceptors.response.use(
 
         const newToken = data.access_token;
         auth.token = newToken;
-        localStorage.setItem("token", newToken);
 
         processQueue(null, newToken);
         if (originalRequest.headers)

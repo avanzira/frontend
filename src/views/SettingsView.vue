@@ -69,18 +69,26 @@
 import { reactive, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useAuthStore } from "../store/auth.store";
-import { useSettingsStore } from "../store/settings.store";
+import { useSettingsStore, type Language, type Theme } from "../store/settings.store";
 import api from "../services/api";
 
 const auth = useAuthStore();
 const settings = useSettingsStore();
 const { t } = useI18n();
 
+const resolveLanguage = (value?: string | null): Language =>
+  value === "es" || value === "en" || value === "fr" ? value : settings.language;
+
+const resolveTheme = (value?: string | null): Theme =>
+  value === "light" || value === "dark" || value === "earth"
+    ? value
+    : settings.theme;
+
 const form = reactive({
   username: auth.user?.username || "",
   email: auth.user?.email || "",
-  user_language: auth.user?.user_language || settings.language,
-  user_theme: auth.user?.user_theme || settings.theme,
+  user_language: resolveLanguage(auth.user?.user_language),
+  user_theme: resolveTheme(auth.user?.user_theme),
 });
 
 const oldPassword = ref("");
