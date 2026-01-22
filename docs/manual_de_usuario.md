@@ -43,6 +43,20 @@
   - TODO cambiar la contraseña de otro usuario desde el panel, añadiendo el nombre o id ¿Es posible con esta API?
 - Desactivar y restaurar usuario (soft delete / restore)
 
+## Productos
+
+- Campos: nombre, unidad, inventariable
+- Filtros: nombre e inventariable (si/no)
+- Lista incluye costo promedio (solo lectura)
+- Acciones: crear, editar, desactivar, restaurar
+
+## Clientes y Proveedores
+
+- CRUD comun para ambos recursos
+- Campos: nombre, telefono, email, direccion
+- Filtros: nombre y estado (activo/inactivo)
+- Acciones: crear, editar, desactivar, restaurar
+
 ## Documentos
 
 - Landing con accesos:
