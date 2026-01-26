@@ -478,46 +478,6 @@ const movementLabel = computed(() => {
   }
 });
 
-const payloadExample = computed(() => {
-  if (movementType.value === "inbound") {
-    return JSON.stringify(
-      {
-        to_stock_location_id: 2,
-        product_id: 1,
-        quantity: 10,
-        date: "2026-01-26",
-        notes: "Entrada por regularizacion",
-      },
-      null,
-      2
-    );
-  }
-  if (movementType.value === "outbound") {
-    return JSON.stringify(
-      {
-        from_stock_location_id: 2,
-        product_id: 1,
-        quantity: 5,
-        date: "2026-01-26",
-        notes: "Salida por ajuste",
-      },
-      null,
-      2
-    );
-  }
-  return JSON.stringify(
-    {
-      from_stock_location_id: 1,
-      to_stock_location_id: 2,
-      product_id: 1,
-      quantity: 5,
-      date: "2026-01-26",
-      notes: "Transferencia interna",
-    },
-    null,
-    2
-  );
-});
 
 const filteredNotes = computed(() => {
   return notes.value.filter((note) => {
