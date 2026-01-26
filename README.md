@@ -1,5 +1,39 @@
-# Vue 3 + TypeScript + Vite
+# Oil Frontend
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Interfaz web del proyecto Oil, enfocada en una experiencia clara y rapida para usuarios finales y equipos internos.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Stack
+- Vue 3
+- TypeScript
+- Vite
+
+## Requisitos
+- Node.js 18+ (recomendado)
+- npm 9+
+
+## Instalacion
+```bash
+npm install
+```
+
+## Scripts principales
+```bash
+npm run dev
+npm run build
+npm run preview
+```
+
+## Estructura del proyecto
+- `src/`: codigo de la aplicacion
+- `public/`: assets estaticos
+- `docs/`: documentacion adicional
+
+## Deploy
+Produccion: https://demearizoil.netlify.app/
+El deploy esta configurado para Netlify mediante `netlify.toml`.
+
+## Contribucion
+Abre un issue o PR con una descripcion clara del cambio y su motivacion.
+
+## Licencia
+Pendiente.

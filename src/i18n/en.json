@@ -313,6 +313,156 @@
       "lineDeleteError": "Error deleting line."
     }
   },
+  "stockDeposits": {
+    "title": "Stock deposits",
+    "subtitle": "Move stock between locations.",
+    "filters": {
+      "title": "Filters",
+      "search": "Search",
+      "product": "Product",
+      "status": "Status",
+      "fromLocation": "From",
+      "toLocation": "To",
+      "dateFrom": "From",
+      "dateTo": "To",
+      "all": "All",
+      "clear": "Clear"
+    },
+    "form": {
+      "createTitle": "Create stock deposit",
+      "editTitle": "Edit stock deposit",
+      "movementType": "Movement type",
+      "product": "Product",
+      "quantity": "Quantity",
+      "fromLocation": "From location",
+      "toLocation": "To location",
+      "fromBalance": "From stock",
+      "toBalance": "To stock",
+      "balanceEmpty": "Select product and location",
+      "availableNotInventory": "Not an inventory product",
+      "date": "Date",
+      "notes": "Notes",
+      "status": "Status",
+      "movement": "Movement",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "confirming": "Confirming...",
+      "noLocation": "None"
+    },
+    "list": {
+      "title": "List",
+      "id": "ID",
+      "date": "Date",
+      "product": "Product",
+      "quantity": "Quantity",
+      "fromLocation": "From",
+      "toLocation": "To",
+      "status": "Status",
+      "actions": "Actions",
+      "view": "View",
+      "confirm": "Confirm",
+      "empty": "No stock deposits to display."
+    },
+    "status": {
+      "draft": "Draft",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled"
+    },
+    "movement": {
+      "transfer": "Transfer",
+      "inbound": "Inbound",
+      "outbound": "Outbound",
+      "unknown": "Unspecified"
+    },
+    "messages": {
+      "created": "Stock deposit created successfully.",
+      "updated": "Stock deposit updated successfully.",
+      "confirmed": "Stock deposit confirmed successfully.",
+      "loadError": "Error loading stock deposits.",
+      "saveError": "Error saving stock deposit.",
+      "confirmError": "Error confirming stock deposit.",
+      "quantityError": "Quantity must be greater than zero.",
+      "requiresLocation": "Select origin or destination.",
+      "stockNegative": "Stock cannot become negative.",
+      "productError": "Select a product.",
+      "acknowledge": "Understood"
+    }
+  },
+  "cashTransfers": {
+    "title": "Cash transfers",
+    "subtitle": "Register cash adjustments and transfers.",
+    "filters": {
+      "title": "Filters",
+      "search": "Search",
+      "status": "Status",
+      "fromAccount": "From",
+      "toAccount": "To",
+      "dateFrom": "From",
+      "dateTo": "To",
+      "all": "All",
+      "clear": "Clear"
+    },
+    "form": {
+      "createTitle": "Create cash transfer",
+      "editTitle": "Edit cash transfer",
+      "movementType": "Movement type",
+      "amount": "Amount",
+      "fromAccount": "From account",
+      "toAccount": "To account",
+      "fromBalance": "From balance",
+      "toBalance": "To balance",
+      "date": "Date",
+      "notes": "Notes",
+      "status": "Status",
+      "movement": "Movement",
+      "balanceEmpty": "Select an account",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "confirming": "Confirming...",
+      "noAccount": "None"
+    },
+    "list": {
+      "title": "List",
+      "id": "ID",
+      "date": "Date",
+      "amount": "Amount",
+      "fromAccount": "From",
+      "toAccount": "To",
+      "status": "Status",
+      "actions": "Actions",
+      "view": "View",
+      "confirm": "Confirm",
+      "empty": "No cash transfers to display."
+    },
+    "status": {
+      "draft": "Draft",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled"
+    },
+    "movement": {
+      "transfer": "Transfer",
+      "inbound": "Inbound",
+      "outbound": "Outbound"
+    },
+    "messages": {
+      "created": "Cash transfer created successfully.",
+      "updated": "Cash transfer updated successfully.",
+      "confirmed": "Cash transfer confirmed successfully.",
+      "loadError": "Error loading cash transfers.",
+      "saveError": "Error saving cash transfer.",
+      "confirmError": "Error confirming cash transfer.",
+      "requiresAccount": "Select origin or destination.",
+      "amountError": "Amount must be greater than zero.",
+      "sameAccountError": "Origin and destination must be different.",
+      "accountNotFound": "Cash account not found.",
+      "negativeBalance": "Cash balance cannot become negative.",
+      "acknowledge": "Understood"
+    }
+  },
   "products": {
     "title": "Products",
     "subtitle": "Manage the product catalog.",

@@ -313,6 +313,156 @@
       "lineDeleteError": "Erreur de suppression de la ligne."
     }
   },
+  "stockDeposits": {
+    "title": "Depots de stock",
+    "subtitle": "Mouvements de stock entre emplacements.",
+    "filters": {
+      "title": "Filtres",
+      "search": "Rechercher",
+      "product": "Produit",
+      "status": "Statut",
+      "fromLocation": "Origine",
+      "toLocation": "Destination",
+      "dateFrom": "Du",
+      "dateTo": "Au",
+      "all": "Tous",
+      "clear": "Effacer"
+    },
+    "form": {
+      "createTitle": "Creer un depot de stock",
+      "editTitle": "Editer le depot de stock",
+      "movementType": "Type de mouvement",
+      "product": "Produit",
+      "quantity": "Quantite",
+      "fromLocation": "Emplacement origine",
+      "toLocation": "Emplacement destination",
+      "fromBalance": "Stock origine",
+      "toBalance": "Stock destination",
+      "balanceEmpty": "Selectionner produit et emplacement",
+      "availableNotInventory": "Non inventorie",
+      "date": "Date",
+      "notes": "Notes",
+      "status": "Statut",
+      "movement": "Mouvement",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler",
+      "confirm": "Confirmer",
+      "confirming": "Confirmation...",
+      "noLocation": "Aucun"
+    },
+    "list": {
+      "title": "Liste",
+      "id": "ID",
+      "date": "Date",
+      "product": "Produit",
+      "quantity": "Quantite",
+      "fromLocation": "Origine",
+      "toLocation": "Destination",
+      "status": "Statut",
+      "actions": "Actions",
+      "view": "Voir",
+      "confirm": "Confirmer",
+      "empty": "Aucun depot de stock."
+    },
+    "status": {
+      "draft": "Brouillon",
+      "confirmed": "Confirme",
+      "cancelled": "Annule"
+    },
+    "movement": {
+      "transfer": "Transfert",
+      "inbound": "Entree",
+      "outbound": "Sortie",
+      "unknown": "Non defini"
+    },
+    "messages": {
+      "created": "Depot de stock cree.",
+      "updated": "Depot de stock mis a jour.",
+      "confirmed": "Depot de stock confirme.",
+      "loadError": "Erreur lors du chargement des depots de stock.",
+      "saveError": "Erreur lors de l'enregistrement du depot de stock.",
+      "confirmError": "Erreur lors de la confirmation du depot de stock.",
+      "quantityError": "La quantite doit etre superieure a zero.",
+      "requiresLocation": "Selectionnez une origine ou une destination.",
+      "stockNegative": "Le stock ne peut pas devenir negatif.",
+      "productError": "Selectionnez un produit.",
+      "acknowledge": "Compris"
+    }
+  },
+  "cashTransfers": {
+    "title": "Transferts de caisse",
+    "subtitle": "Enregistrer les ajustements et transferts de caisse.",
+    "filters": {
+      "title": "Filtres",
+      "search": "Rechercher",
+      "status": "Statut",
+      "fromAccount": "Origine",
+      "toAccount": "Destination",
+      "dateFrom": "Du",
+      "dateTo": "Au",
+      "all": "Tous",
+      "clear": "Effacer"
+    },
+    "form": {
+      "createTitle": "Creer un transfert de caisse",
+      "editTitle": "Editer le transfert de caisse",
+      "movementType": "Type de mouvement",
+      "amount": "Montant",
+      "fromAccount": "Compte origine",
+      "toAccount": "Compte destination",
+      "fromBalance": "Solde origine",
+      "toBalance": "Solde destination",
+      "date": "Date",
+      "notes": "Notes",
+      "status": "Statut",
+      "movement": "Mouvement",
+      "balanceEmpty": "Selectionnez un compte",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler",
+      "confirm": "Confirmer",
+      "confirming": "Confirmation...",
+      "noAccount": "Aucun"
+    },
+    "list": {
+      "title": "Liste",
+      "id": "ID",
+      "date": "Date",
+      "amount": "Montant",
+      "fromAccount": "Origine",
+      "toAccount": "Destination",
+      "status": "Statut",
+      "actions": "Actions",
+      "view": "Voir",
+      "confirm": "Confirmer",
+      "empty": "Aucun transfert de caisse."
+    },
+    "status": {
+      "draft": "Brouillon",
+      "confirmed": "Confirme",
+      "cancelled": "Annule"
+    },
+    "movement": {
+      "transfer": "Transfert",
+      "inbound": "Entree",
+      "outbound": "Sortie"
+    },
+    "messages": {
+      "created": "Transfert de caisse cree.",
+      "updated": "Transfert de caisse mis a jour.",
+      "confirmed": "Transfert de caisse confirme.",
+      "loadError": "Erreur lors du chargement des transferts de caisse.",
+      "saveError": "Erreur lors de l'enregistrement du transfert de caisse.",
+      "confirmError": "Erreur lors de la confirmation du transfert de caisse.",
+      "requiresAccount": "Selectionnez une origine ou une destination.",
+      "amountError": "Le montant doit etre superieur a zero.",
+      "sameAccountError": "Origine et destination doivent etre differentes.",
+      "accountNotFound": "Compte de caisse introuvable.",
+      "negativeBalance": "Le solde ne peut pas devenir negatif.",
+      "acknowledge": "Compris"
+    }
+  },
   "products": {
     "title": "Produits",
     "subtitle": "Gestion du catalogue des produits.",
